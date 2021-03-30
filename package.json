@@ -1,0 +1,24 @@
+{
+  "name": "evalnlpproj",
+  "version": "1.0.0",
+  "description": "Project 4 for Udacity FEND NanoDegree to create an app that evaluates news articles using Natural Language Processor",
+  "main": "./src/client/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiagocostarebelo/udacity_evalnlpproj.git"
+  },
+  "author": "Tiago Costa Rebelo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tiagocostarebelo/udacity_evalnlpproj/issues"
+  },
+  "homepage": "https://github.com/tiagocostarebelo/udacity_evalnlpproj#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
