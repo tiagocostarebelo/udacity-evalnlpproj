@@ -1,3 +1,5 @@
+const path = require('path');
+const mockAPIResponse = require('./mockAPI.js');
 //Express
 const express = require('express');
 const app = express;
@@ -10,6 +12,7 @@ const cors = require('cors');
 app.use(cors());
 //Main Folder
 app.use(express.static('dist'));
+console.log(__dirname);
 
 //Server
 const port = 8081;
@@ -20,7 +23,7 @@ function listening() {
 
 //Get Request to the homepage
 app.get('/', function (req, res) {
-    res.send("Hello World");
+    res.sendFile('dist/index.html');
 });
 
 //Post Request to the Homepage
