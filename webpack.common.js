@@ -1,12 +1,10 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 
 module.exports = {
     entry: "./src/client/index.js",
-    output: {
-        filename: "main.js",
-        path: path.resolve(__dirname, "dist")
-    },
     module: {
         rules: [
           {
@@ -18,20 +16,13 @@ module.exports = {
                 presets: ['@babel/preset-env']
               }
             }
-          }],         
-        plugins: [new HtmlWebpackPlugin({
-            template: "./src/client/views/index.html",
-            filename: "./index.html"
+          },
+          
+        ]
+    },
+    plugins: [new HtmlWebpackPlugin({
+        template: "./src/client/views/index.html",
+        filename: "./index.html"
         }),
-        new CleanWebpackPlugin({
-        // Simulate the removal of files
-        dry: true,
-        // Write Logs to Console
-        verbose: true,
-        // Automatically remove all unused webpack assets on rebuild
-        cleanStaleWebpackAssets: true,
-        protectWebpackAssets: false
-    })],
-        
-    }
-}
+    ], 
+};
