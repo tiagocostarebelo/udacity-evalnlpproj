@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.static('dist'));
 
 //Server
-const port = 8080;
+const port = 8081;
 const server = app.listen(port, listening);
 function listening() {
     console.log(`server is running on port ${port}`);
