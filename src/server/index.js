@@ -2,16 +2,13 @@ projectData = {};
 //Protecting API key
 const dotenv = require('dotenv');
 dotenv.config();
+
 //Api Call
-const baseURL = 'https://api.meaningcloud.com/sentiment-2.1?key=';
-const myApi = {
+
+const apiKey = {
     application_key: process.env.API_KEY
  };
- const json = '&of=json&txt=';
- const apiKey = {
-    application_key: process.env.API_KEY
- };
-const final = '&model=General&lang=en';
+
 
 //Dependencies and middleware
 const path = require('path');
