@@ -4,10 +4,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 //Api Call
-
-const apiKey = {
-    application_key: process.env.API_KEY
- };
+const baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
+const apiKey = process.env.API_KEY;
 
 
 //Dependencies and middleware
@@ -18,27 +16,38 @@ const http = require('http');
 const cors = require('cors');
 //Express
 const express = require('express');
+const { response } = require('express');
 const app = express();
 //As of Express version > 4.16
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
-// app.use(bodyParser.json());
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
 
 //Main Folder
-app.use(express.static('dist'));
+app.use(express.static(path.join(__dirname, '../../dist')));
 console.log(__dirname);
 
 //Port
-const port = process.env.PORT || 8081;
+const port = process.env.PORT || 8001;
 app.listen(port, function() {
     console.log(`server is running on port ${port}`)
 });
 
 //Routes
 app.get('/', function (req, res) {
-    res.sendFile('dist/index.html')
+    console.log("Hello from server index")
+    res.send("Hello from Server Index")
 })
 
 //POST request
+app.post('/test', function (req, res) {
+    res.send(mockAPIResponse)
+})
+
+
+
+
+
 
