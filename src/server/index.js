@@ -27,7 +27,7 @@ app.use(cors());
 
 //Main Folder
 app.use(express.static(path.join(__dirname, '../../dist')));
-console.log(__dirname);
+
 
 //Port
 const port = process.env.PORT || 8001;
@@ -35,16 +35,21 @@ app.listen(port, function() {
     console.log(`server is running on port ${port}`)
 });
 
+console.log(__dirname);
+
 //Routes
 app.get('/', function (req, res) {
     console.log("Hello from server index")
     res.send("Hello from Server Index")
+    // res.sendFile('dist/index.html', { root: __dirname })
 })
 
 //POST request
 app.post('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
+
+
 
 
 

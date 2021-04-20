@@ -8,6 +8,22 @@ function handleSubmit(event) {
     let formUrl = document.getElementById('url').value
         if(checkUrl(formUrl)) {
             console.log(formUrl)
+            fetch('http://localhost:8001/test', {
+                method: 'POST',
+                credentials: 'same-origin',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body:JSON.stringify({formUrl: formUrl}),
+            })    
+            .then(res => {
+                return res.json()
+            })
+            .then(function(data) {
+                document.getElementById('report').innerHTML = data.message
+            })
+        console.log(":::Form Submitted:::");
             
         } else {
                 alert('invalid URL')
