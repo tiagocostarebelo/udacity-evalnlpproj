@@ -1,6 +1,7 @@
 import {checkUrl} from "./checkUrl";
 
 
+
 document.getElementById('submit').addEventListener('click', handleSubmit);
 
 function handleSubmit(event) {
@@ -8,12 +9,12 @@ function handleSubmit(event) {
     let formUrl = document.getElementById('url').value
         if(checkUrl(formUrl)) {
             console.log(formUrl)
-            fetch('http://localhost:8001/test', {
+            fetch('http://localhost:8001/analysis', {
                 method: 'POST',
                 credentials: 'same-origin',
                 mode: 'cors',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-Type': 'multipart/form-data',
                 },
                 body:JSON.stringify({formUrl: formUrl}),
             })    
@@ -21,6 +22,7 @@ function handleSubmit(event) {
                 return res.json()
             })
             .then(function(data) {
+                console.log(data);
                 document.getElementById('report').innerHTML = data.message
             })
         console.log(":::Form Submitted:::");
