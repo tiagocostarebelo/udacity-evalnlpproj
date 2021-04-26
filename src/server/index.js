@@ -5,7 +5,7 @@ dotenv.config();
 
 //Api Call
 const baseURL = "https://api.meaningcloud.com/sentiment-2.1?key=";
-const apiKey = process.env.API_KEY
+const apiKey = {application_key: process.env.API_KEY};
 
 
 //Dependencies and middleware
@@ -50,8 +50,9 @@ app.post('/test', function (req, res) {
     res.send(mockAPIResponse)
 })
 
-app.post("/analysis", async(req, res)=>{
-    const getSentiment = await fetch(`${baseURL}${apiKey}"&of=json&url="${req.body.formText}`,{
+app.post('/analysis', async function (req, res){
+    console.log(req.body)
+    const getSentiment = await fetch(`${baseURL}${apiKey.application_key}&of=json&url=${req.body.formUrl}&lang=auto`,{
         method: 'POST'
     });
     try{
@@ -60,9 +61,12 @@ app.post("/analysis", async(req, res)=>{
         res.send(data);
     }catch(error){
         console.log("error", error);
-}
+    }
 
 });
+
+
+
 
 
 

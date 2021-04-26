@@ -15,7 +15,7 @@
         <div class="container">
             <form>
                 <label for="url">Enter a URL</label>
-                <input type="url" id="url" name="homepage" placeholder="https://www.example.com" required>
+                <input type="text" id="url" name="url" placeholder="https://www.example.com" required>
                 <input type="submit" id="submit"name="submit" value="Submit">
                 <input type="reset" id="reset"name="reset" value="Reset">
             </form>
@@ -25,13 +25,15 @@
     </main>
 
     <section>
-        <h2 class="analysis">Analysis</h2>
+        
         <div id="report">
+            <h2 id="analysis">Analysis</h2>
             <ul>
-                <li>TBA</li>
-                <li>TBA</li>
-                <li>TBA</li>
-                <li>TBA</li>
+                <li id="agreement"></li>
+                <li id="confidence"></li>
+                <li id="irony"></li>
+                <li id="model"></li>
+                <li id="score"></li>
             </ul>
         </div>
     </section>
