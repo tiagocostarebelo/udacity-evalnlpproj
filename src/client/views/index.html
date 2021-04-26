@@ -14,25 +14,22 @@
     <main>
         <div class="container">
             <form>
-                <label for="url">Enter a URL</label>
+                <label for="url"><h4>Enter a URL</h4></label>
                 <input type="text" id="url" name="url" placeholder="https://www.example.com" required>
                 <input type="submit" id="submit"name="submit" value="Submit">
                 <input type="reset" id="reset"name="reset" value="Reset">
-            </form>
-            <div id="url_validation">
-            </div>
+            </form>        
         </div>
     </main>
 
-    <section>
-        
-        <div id="report">
-            <h2 id="analysis">Analysis</h2>
+    <section> 
+        <h2 id="analysis">Analysis</h2> 
+        <div id="url_validation"></div>      
+        <div id="report">       
             <ul>
                 <li id="agreement"></li>
                 <li id="confidence"></li>
                 <li id="irony"></li>
-                <li id="model"></li>
                 <li id="score"></li>
             </ul>
         </div>
