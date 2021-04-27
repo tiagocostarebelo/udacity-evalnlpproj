@@ -1,14 +1,64 @@
 form {
-    border-radius: 3px;
-    padding: 40px;
-    min-height: 30vh;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    
 }
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
+h2 {
+    font-size: 30px;
+    color: white !important;
+    text-align: center;
+}
+
+input[type=url]{
+    margin: 10px 0px 10px 0px;
+    padding: 5px;
+    fill: none;
+    background: rgba(255, 255, 255, 0.356);
+    border: none;
+    box-shadow: 3px 3px 5px rgba(41, 41, 41, 0.212);
+    width: 500px;
+}
+
+input[type=url]:focus {
+    border: none;
+    background: white;
+    outline: none;
+}
+
+input[type=submit]{
+    padding: 5px;
+    background-color: rgb(255, 153, 0);
+    border: none;
+    color: white;
+    width: 200px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgb(173, 105, 2);
+    font-weight: bold;
+}
+
+input[type=reset]{
+    padding: 5px;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    color: white;
+    width: 200px;
+    cursor: pointer;
+}
+
+input[type=reset]:hover{
+    background-color: rgb(133, 0, 0);
+    font-weight: bold;
+}
+
+input, textarea {
+    font-family:inherit;    
 }
 
 

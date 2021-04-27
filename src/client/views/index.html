@@ -8,32 +8,35 @@
 </head>
 <body>
     <header>
-        <h1 class="title">Evaluate News Article using Natural Language Processor</h1>
+        <h1 class="title">Evaluate News Article <span>using</span><br>Natural Language Processor</h1>
     </header>
+    <div class="main_container">
+        <main>
+            <div class="container">
+                <form>
+                    <label for="url"><h2 class="title">Enter a URL</h2></label>
+                    <input type="url" id="url" name="url" placeholder="https://www.example.com" required>
+                    <div class="buttons">
+                        <input type="submit" id="submit" name="submit" value="Submit">
+                        <input type="reset" id="reset" name="reset" value="Reset">
+                    </div>
+                </form>        
+            </div>
+        </main>
 
-    <main>
-        <div class="container">
-            <form>
-                <label for="url"><h4>Enter a URL</h4></label>
-                <input type="text" id="url" name="url" placeholder="https://www.example.com" required>
-                <input type="submit" id="submit"name="submit" value="Submit">
-                <input type="reset" id="reset"name="reset" value="Reset">
-            </form>        
-        </div>
-    </main>
-
-    <section> 
-        <h2 id="analysis">Analysis</h2> 
-        <div id="url_validation"></div>      
-        <div id="report">       
-            <ul>
-                <li id="agreement"></li>
-                <li id="confidence"></li>
-                <li id="irony"></li>
-                <li id="score"></li>
-            </ul>
-        </div>
-    </section>
+        <section> 
+            <h3 id="analysis" class="title">Analysis</h3> 
+            <div id="url_validation"></div>      
+            <div id="report">       
+                <ul>
+                    <li id="agreement"></li>
+                    <li id="confidence"></li>
+                    <li id="irony"></li>
+                    <li id="score"></li>
+                </ul>
+            </div>
+        </section>
+    </div>
     <footer>
         <p>Project by Tiago Costa Rebelo.</p>
     </footer>

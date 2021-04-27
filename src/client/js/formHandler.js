@@ -24,6 +24,7 @@ function handleSubmit(event) {
             })
             .then(function(data) {
                 console.log(data);
+                
                 document.getElementById('report').style.display = "block";
                 document.getElementById('agreement').innerHTML = "<p><strong>Agreement:</strong></p>" + data.agreement
                 document.getElementById('confidence').innerHTML = "<p><strong>Confidence:</strong></p>" + data.confidence
