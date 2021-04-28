@@ -3,12 +3,46 @@ section {
     flex-direction: column;
     align-items: center;
     min-height: 30vh;
+    margin: 10px;
     
 }
 
 #report {
     display: none;
 }
+
+h3 {
+    margin: 20px;
+    color: white !important;
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+
+#url_validation p {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(255, 17, 17);
+    align-self: center;
+    border: 2px red solid;
+}
+
+ul li {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+ul li p {
+    color: rgb(139, 44, 0);
+    
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+
+
+
 
 
 
