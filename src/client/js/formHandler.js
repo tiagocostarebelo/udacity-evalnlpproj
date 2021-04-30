@@ -8,7 +8,7 @@ const validator = document.getElementById('url_validation');
 
 function handleSubmit(event) {
     event.preventDefault();
-    let formUrl = document.getElementById('url').value
+    let formUrl = document.getElementById('url').value;
     validator.innerHTML = '';
     document.getElementById('report').style.display = "none";
 
